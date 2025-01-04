@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Test with Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="home-screen" class="fade-in">
+    <h1>Welcome to the Aptitude Test</h1>
+    <p>Select a Category:</p>
+    <div id="categories">
+      <button class="category-btn" data-category="python">Python</button>
+      <button class="category-btn" data-category="java">Java</button>
+      <button class="category-btn" data-category="c">C</button>
+      <button class="category-btn" data-category="cpp">C++</button>
+      <button class="category-btn" data-category="database">Database</button>
+      <button class="category-btn" data-category="cloud">Cloud Computing</button>
+    </div>
+  </div>
+
+  <div id="quiz-screen" class="hidden fade-in">
+    <h1 id="category-title" class="category-title">Category</h1>
+    <p id="user-name"></p>
+    <div id="question-container">
+      <p id="question" class="fade-in">Question will appear here...</p>
+      <p id="hint" class="hidden fade-in">Hint will appear here...</p>
+      <input type="text" id="answer-input" placeholder="Your answer here" />
+      <button id="submit-btn">Submit</button>
+    </div>
+    <div id="timer-container">
+      <p>Time Remaining: <span id="timer">25</span> seconds</p>
+    </div>
+    <p id="feedback" class="hidden fade-in"></p>
+    <p id="score">Score: 0</p>
+    <button id="pause-btn">Pause</button>
+    <button id="resume-btn" class="hidden">Resume</button>
+  </div>
+
+  <div id="summary-screen" class="hidden fade-in">
+    <h1>Quiz Completed!</h1>
+    <p id="final-score">Your final score is: 0</p>
+    <button id="restart-btn">Restart Quiz</button>
+  </div>
+
+  <div id="chatbot-container" class="hidden">
+    <h2>Chatbot</h2>
+    <div id="chat-display"></div>
+    <input type="text" id="chat-input" placeholder="Ask the chatbot something..." />
+    <button id="chat-send">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
